@@ -1,0 +1,27 @@
+int main (){
+    int N, intento;
+    char usuario[100];
+    printf("introduzca su nombre de usuario: \n");
+    fgets(usuario, sizeof(usuario), stdin);
+    N=1;
+        do
+        {
+            printf("ingrese la contrasena: ");
+            scanf("%d", &intento);
+            if (intento==1234)
+            {
+                printf("acceso permitido\n");
+            }
+            else
+            {
+                printf("acceso denegado\n");
+                printf("llevas %d intento\n", N);
+            }
+            N=N+1;
+        } while (intento!=1234 && N<4);
+        if (intento==1234)
+        {
+            printf("bienvenid@ %s", usuario);
+        }
+        return 0;
+} 
